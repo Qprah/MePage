@@ -329,13 +329,20 @@ h6 {
 }
 
 .footer .copyright {
-  padding-top: 25px;
+  padding-top: 0px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  color: white;
+  user-select: none;
 }
 
 .footer .credits {
   font-size: 13px;
   padding-top: 5px;
+  color: white !important;           
+  pointer-events: none;    
+  text-decoration: none;   
+  user-select: none;
+  cursor: default;   
 }
 
 /*--------------------------------------------------------------
@@ -511,6 +518,11 @@ section,
 .section-title p {
   margin-bottom: 0;
 }
+
+.img-fluid {
+  border-radius: 5%;
+}
+
 
 /*--------------------------------------------------------------
 # Hero Section
