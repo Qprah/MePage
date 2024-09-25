@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('form');
+    const form = document.getElementById('email-form');
     const btn = document.getElementById('send_button');
 
     // Check if form exists
