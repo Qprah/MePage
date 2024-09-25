@@ -108,6 +108,7 @@ h6 {
   padding: 15px;
   margin-bottom: 24px;
   font-weight: 600;
+  border-radius: 5px;
 }
 
 .email-form .loading {
@@ -755,6 +756,8 @@ section,
 }
 
 .resume .resume-item ul li {
+  font-family: var(--heading-font);
+  font-weight: 600;
   padding-bottom: 10px;
 }
 
@@ -1094,7 +1097,7 @@ section,
 
 .contact .info-item i {
   color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  background: color-mix(in srgb, var(--accent-color), transparent 80%);
   font-size: 20px;
   width: 44px;
   height: 44px;
@@ -1124,7 +1127,7 @@ section,
   color: var(--contrast-color);
 }
 
-.contact .email-form {
+ .email-form {
   height: 100%;
 }
 
@@ -1134,15 +1137,26 @@ section,
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
-  border-radius: 0;
+  border-radius: 8px;
   color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 0%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 75%);
+  transition: 0.3s;
+}
+
+.contact .email-form input[type=text]:hover,
+.contact .email-form input[type=email]:hover,
+.contact .email-form textarea:hover,
+.contact .email-form input[type=text]:focus,
+.contact .email-form input[type=email]:focus,
+.contact .email-form textarea:focus  {
+  border-color: color-mix(in srgb, var(--accent-color), transparent 0%);
 }
 
 .contact .email-form input[type=text]:focus,
 .contact .email-form input[type=email]:focus,
-.contact .email-form textarea:focus {
+.contact .email-form textarea:focus  {
+  border-width: 1px;
   border-color: var(--accent-color);
 }
 
@@ -1162,7 +1176,12 @@ section,
 }
 
 .contact .email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  background: color-mix(in srgb, var(--accent-color) , transparent 25%);
+}
+
+#send_button:disabled:hover {
+  background-color: #960505; /* Keep the same color on hover when disabled */
+  cursor: not-allowed; /* Keep the cursor as not-allowed */
 }
 
 /*--------------------------------------------------------------
