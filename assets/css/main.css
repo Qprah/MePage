@@ -525,7 +525,6 @@ section,
   border-radius: 5%;
 }
 
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -537,6 +536,11 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 992px) {
+  #hero {
+    padding-left: 60px;
+  }
 }
 
 .hero img {
