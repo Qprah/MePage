@@ -9,7 +9,7 @@ const lightModePhrases = [
     "<!--It's too bright.-->", 
     "<!--My eyes! It's too much light.-->", 
     "<!--Who turned on the sun?-->", 
-    "<!--I miss the darkness.-->", 
+    "<!--I miss the dark-mode.-->", 
     "<!--This feels wrong, turn it off.-->", 
     "<!--Why does everything hurt now?-->", 
     "<!--Bring back the night!-->", 
@@ -22,30 +22,27 @@ const lightModePhrases = [
     "<!--Dark mode was my comfort zone.-->", 
     "<!--I didn't sign up for this brightness!-->", 
     "<!--Can we pretend this never happened?-->", 
-    "<!--Why did you abandon the dark side?-->", 
+    "<!--Why did you abandon the dark-mode?-->", 
     "<!--I need sunglasses for this!-->"
 ];
 
 // Array of phrases for when dark mode is enabled
 const darkModePhrases = [
     "<!--Perfect! Dark mode enabled.-->", 
-    "<!--Welcome to the dark side.-->", 
+    "<!--Welcome to the dark-mode.-->", 
     "<!--Ah, much better.-->", 
     "<!--My eyes can finally relax.-->", 
-    "<!--Embrace the darkness!-->", 
-    "<!--This is where I belong.-->", 
+    "<!--Embrace the dark-mode!-->", 
     "<!--Night mode is the best mode.-->", 
     "<!--Now that's more like it.-->", 
-    "<!--Who needs light anyway?-->", 
+    "<!--Who needs light-mode anyway?-->", 
     "<!--Finally, peace for my eyes.-->", 
-    "<!--I love it when it's dark.-->", 
-    "<!--Darkness is my happy place.-->", 
+    "<!--Love it, when it's the dark-mode.-->",  
     "<!--This feels just right.-->", 
     "<!--Now I can focus.-->", 
     "<!--No more headaches from the light.-->", 
-    "<!--Darkness, my old friend.-->", 
-    "<!--Let's keep it this way forever.-->", 
-    "<!--Everything looks cooler in dark mode.-->", 
+    "<!--Dark-mode, my old friend.-->", 
+    "<!--Everything looks cooler in dark-mode.-->", 
     "<!--I can stay here forever.-->", 
     "<!--Welcome to the shadows.-->"
 ];
