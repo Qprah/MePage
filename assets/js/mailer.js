@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const errorMessage = document.querySelector('.error-message');
     const sentMessage = document.querySelector('.sent-message');
 
-
     // Disable the button initially
     btn.disabled = true;
 
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     isValid = false; // Empty email field
                 } else if (excludedDomains.includes(emailDomain)) {
                     isValid = false; // Invalid email domain
-                    errorMessage.textContent = `Email domain '${emailDomain}' is restricted, along with ${excludedDomains.filter(item => item!==emailDomain)}`;
+                    errorMessage.textContent = `Email domain '${emailDomain}' is restricted, along with ${excludedDomains.filter(item => item !== emailDomain)}`;
                     errorMessage.style.display = 'block'; // Show error message
                 }
             } else if (input.value.trim() === '') {
@@ -43,6 +42,16 @@ document.addEventListener('DOMContentLoaded', function () {
         form.addEventListener("submit", function (event) {
             event.preventDefault();
 
+            // Get reCAPTCHA response token
+            const recaptchaResponse = grecaptcha.getResponse();
+
+            if (!recaptchaResponse) {
+                // Show error message if reCAPTCHA is not completed
+                errorMessage.textContent = 'Please complete the reCAPTCHA';
+                errorMessage.style.display = 'block';
+                return; // Prevent form submission
+            }
+
             btn.value = 'Sending...';
             loadingMessage.style.display = 'block'; // Show loading message
             errorMessage.style.display = 'none'; // Hide error message
@@ -54,10 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 email_id: document.getElementById("email_id").value,
                 subject: document.getElementById("subject").value,
                 message: document.getElementById("message").value,
+                'g-recaptcha-response': recaptchaResponse
             };
 
             // Send email using emailJS or similar service
-            emailjs.send("service_kwyuksl", "template_up6gzjy", params)
+            emailjs.send("service_bk0j879", "template_gdsfkhu", params)
                 .then(() => {
                     btn.value = 'Send Email';
                     loadingMessage.style.display = 'none'; // Hide loading message

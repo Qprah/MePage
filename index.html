@@ -27,7 +27,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-
   <!-- Mailer js -->
   <!-- Email contact js file -->
   <script src="assets/js/mailer.js" type="text/javascript"></script>
@@ -35,7 +34,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <script type="text/javascript">
-    emailjs.init('RhHQNHnn4VnQ7vu0Z')
+    emailjs.init('fEZnuC4BZu_59T22_')
   </script>
 
   <!-- Main CSS File -->
@@ -224,7 +223,7 @@
 </div><!-- End Section Title -->
 <div class="container" data-aos="fade" data-aos-delay="100">
   <div class="col-lg-8 offset-lg-2">
-      <form id="email-form" class="email-form" data-aos="fade-up" data-aos-delay="200">
+      <form action="http://httpbin.org/post" method="POST" id="email-form" class="email-form" data-aos="fade-up" data-aos-delay="200">
           <div class="row gy-4">
               <div class="col-md-6">
                   <input type="text" id="from_name" name="name" class="form-control" placeholder="Your Name" required="">
@@ -238,14 +237,20 @@
               <div class="col-md-12">
                   <textarea class="form-control" id="message" name="message" rows="6" placeholder="Message" required=""></textarea>
               </div>
+
               <div class="col-md-12 text-center">
                   <div class="loading" style="display: none;">Loading...</div>
                   <div class="error-message" style="display: none;"></div>
                   <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
+
                   <button id="send_button" type="submit" disabled>Send Message</button>
               </div>
           </div>
       </form>
+      <div class="captcha-container">
+        <div class="g-recaptcha" data-sitekey="6LfNik8qAAAAAK3ysz6eVYGp4L-Gem-pAc_E2FVp"></div>
+      </div>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </div><!-- End Contact Form -->
 </div>
 

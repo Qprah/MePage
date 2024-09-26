@@ -483,6 +483,13 @@ h6 {
   transform: translateX(-30%);
 }
 
+.captcha-container{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 768px) {
   .toggle-container{
     scale: 0.8;
