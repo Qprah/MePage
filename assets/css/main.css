@@ -82,14 +82,20 @@ body.dark-background {
   align-items: center;
 }
 
+.dark-background .checkbox-label{
+  background-color: var(--contrast-color);
+}
 
+.dark-background .checkbox-label .ball{
+  background-color: #111;
+}
 
 .fa-moon {
   color: #f1c40f;
 }
 
 .fa-sun {
-  color: #f39c12;
+  color: #ff8800;
 }
 
 .checkbox-label .ball {
