@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        btn.disabled = !isValid; // Enable/disable button based on validity
+        //btn.disabled = !isValid; // Enable/disable button based on validity
     }
 
     // Attach input event to enable/disable button based on form validation
@@ -92,4 +92,5 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.error("Form element not found!");
     }
+
 });
