@@ -1,6 +1,7 @@
 // JavaScript for toggling dark mode
 const checkbox = document.getElementById("checkbox");
 
+
 // Check for saved preference in local storage and apply it
 if (localStorage.getItem("darkMode") === "enabled") {
     checkbox.checked = true;
@@ -49,3 +50,8 @@ setInterval(() => {
 document.addEventListener('mousemove', resetTimer);
 document.addEventListener('click', resetTimer);
 
+// Show toggle when clicking on the navbar
+const navbar = document.querySelector('.navbar'); // Adjust this selector to your actual navbar element
+if (navbar) {
+    navbar.addEventListener('click', resetTimer);
+}
