@@ -8,10 +8,24 @@ document.addEventListener('DOMContentLoaded', function () {
     // Disable the button initially
     btn.disabled = true;
 
-    // Function to validate form fields
     function validateForm() {
+        const form = document.getElementById('email-form');
+        const btn = document.getElementById('send_button');
         const inputs = form.querySelectorAll('input, textarea');
-        btn.disabled = !Array.from(inputs).every(input => input.value.trim() !== '');
+  
+        // Create an array of domains to exclude
+        const excludedDomains = ['myumanitoba.ca','umanitoba.ca'];
+  
+        // Check if any input fields are empty or contain an excluded domain
+        const isValid = Array.from(inputs).every(input => {
+            if (input.type === 'email') {
+                const emailDomain = input.value.split('@')[1]; // Get the domain after '@'
+                return input.value.trim() !== '' && !excludedDomains.includes(emailDomain);
+            }
+            return input.value.trim() !== ''; // Check for non-email inputs
+        });
+  
+        btn.disabled = !isValid;
     }
 
     // Attach input event to enable/disable button based on form validation
