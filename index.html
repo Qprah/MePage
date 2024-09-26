@@ -223,7 +223,7 @@
 </div><!-- End Section Title -->
 <div class="container" data-aos="fade" data-aos-delay="100">
   <div class="col-lg-8 offset-lg-2">
-      <form action="http://httpbin.org/post" method="POST" id="email-form" class="email-form" data-aos="fade-up" data-aos-delay="200">
+      <form id="email-form" class="email-form" data-aos="fade-up" data-aos-delay="200">
           <div class="row gy-4">
               <div class="col-md-6">
                   <input type="text" id="from_name" name="name" class="form-control" placeholder="Your Name" required="">
@@ -247,7 +247,7 @@
               </div>
           </div>
       </form>
-      <div class="captcha-container">
+      <div class="captcha-container" data-aos="fade-up" data-aos-delay="100">
         <div class="g-recaptcha" data-sitekey="6LfNik8qAAAAAK3ysz6eVYGp4L-Gem-pAc_E2FVp"></div>
       </div>
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
