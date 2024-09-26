@@ -649,6 +649,10 @@ section,
   z-index: 3;
 }
 
+#herro {
+  transform: translateY(-28%);
+}
+
 .hero .msg-toggler{
   margin-bottom: 50px;
 }
@@ -676,7 +680,7 @@ section,
 .hero .social-links a {
   font-size: 20px;
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
