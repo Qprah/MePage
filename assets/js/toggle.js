@@ -47,6 +47,5 @@ setInterval(() => {
 
 // Add event listeners for user activity
 document.addEventListener('mousemove', resetTimer);
-document.addEventListener('keypress', resetTimer);
 document.addEventListener('click', resetTimer);
 
