@@ -120,10 +120,12 @@ function resetTimer() {
 // Check for inactivity every second
 setInterval(() => {
     inactivityTime++;
-    if (inactivityTime >= 1.75) { // 5 seconds of inactivity
+    if (inactivityTime >= 4) {
         hideToggle();
     }
 }, 1000);
+
+document.addEventListener('scroll',hideToggle);
 
 // Add event listeners for user activity
 document.addEventListener('mousemove', resetTimer);
