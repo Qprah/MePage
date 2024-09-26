@@ -17,3 +17,36 @@ checkbox.addEventListener("change", () => {
     localStorage.removeItem("darkMode");
   }
 });
+
+let inactivityTime = 0; // Inactivity timer
+const toggleContainer = document.getElementById('toggle-container');
+
+// Function to hide the toggle button
+function hideToggle() {
+    toggleContainer.classList.remove('active');
+}
+
+// Function to show the toggle button
+function showToggle() {
+    toggleContainer.classList.add('active');
+}
+
+// Reset inactivity timer
+function resetTimer() {
+    inactivityTime = 0; // Reset the timer
+    showToggle(); // Show the toggle on activity
+}
+
+// Check for inactivity every second
+setInterval(() => {
+    inactivityTime++;
+    if (inactivityTime >= 1.75) { // 5 seconds of inactivity
+        hideToggle();
+    }
+}, 1000);
+
+// Add event listeners for user activity
+document.addEventListener('mousemove', resetTimer);
+document.addEventListener('keypress', resetTimer);
+document.addEventListener('click', resetTimer);
+

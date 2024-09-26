@@ -474,10 +474,13 @@ h6 {
   position: fixed;
   opacity: 0;
   right:15px;
-  margin-right: 10px;
-  z-index: 99999;  
+  margin-right: 5px;
+  z-index: 999;  
   transition: all 0.4s;
   scale: 1.5;
+  visibility: hidden;
+  transform: translateX(100%);
+  bottom:50%
 }
 
 .toggle-container:hover {
@@ -487,7 +490,8 @@ h6 {
 .toggle-container.active {
   visibility: visible;
   opacity: 1;
-  bottom: 50%
+  bottom: 50%;
+  transform: translateX(-30%);
 }
 
 @media screen and (max-width: 768px) {
