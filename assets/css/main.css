@@ -492,15 +492,15 @@ h6 {
 
 @media screen and (max-width: 768px) {
   .toggle-container{
-    scale: 0.8;
-    bottom: 75%;
+    scale: 0.9;
+    bottom: 69%;
+    transform: translateX(100%);
+
   }
   .toggle-container.active{
-    scale: 0.8;
-    bottom: 75%;
-  }
-  .toggle-container:hover{
-    scale: 0.8;
+    scale: 0.9;
+    bottom: 69%;
+    transform: translateX(0px);
   }
 }
 
