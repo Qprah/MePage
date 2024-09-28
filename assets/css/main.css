@@ -576,6 +576,7 @@ section,
 
 .img-fluid {
   border-radius: 5%;
+  filter: drop-shadow(0rem 0rem 0.75rem rgb(0, 0, 0));
 }
 
 /*--------------------------------------------------------------
@@ -597,8 +598,6 @@ section,
   
 }
 
-
-
 .hero img {
   position: absolute;
   inset: 0;
@@ -611,6 +610,7 @@ section,
 
 .hero:before {
   content: "";
+  backdrop-filter: blur(2px);
   background: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
   inset: 0;
@@ -619,6 +619,7 @@ section,
 
 .dark-background .hero:before{
   background: color-mix(in srgb, var(--background-color), transparent 30%);
+  backdrop-filter: blur(0px);
 }
 
 .hero .container {
