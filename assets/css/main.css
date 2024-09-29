@@ -1575,14 +1575,19 @@ section,
 
 #footer {
   background-image: url('/assets/img/lines.svg');
-  background-size: cover; /* This makes sure the SVG covers the entire section */
+  background-size: cover; 
   background-repeat: no-repeat; /* Prevents the image from repeating */
   padding: 10px 0; /* Adjust padding as needed */
 }
 
 .dark-background #footer{
   background-image: url('/assets/img/linesd.svg');
-  background-size: cover; /* This makes sure the SVG covers the entire section */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  padding: 10px 0; /* Adjust padding as needed */
+}
+
+@media (max-width: 932px) {
+
+  #footer{
+    background-size: 250%;
+
+  }
 }
