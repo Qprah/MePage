@@ -1,35 +1,96 @@
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-    position: fixed;
-    inset: 0;
-    z-index: 999999;
-    overflow: hidden;
-    background: var(--background-color);
-    transition: all 0.6s ease-out;
+#loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+}
+
+#loader::before {
+  content: "";
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  width: 84px;
+  height: 33px;
+  z-index: 20;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  border-top: none;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.082);
+  animation: anim2 2s infinite linear;
+}
+
+#loader div {
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  animation: anim 2s infinite linear;
+  animation-delay: calc(-0.3s * var(--i));
+  transform: translateY(5px);
+  margin: 0.15em;
+}
+
+@keyframes anim {
+  0%, 100% {
+    transform: translateY(5px);
   }
-  
-  #preloader:before {
-    content: "";
-    position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border: 6px solid #ffffff;
-    border-color: var(--accent-color) transparent var(--accent-color) transparent;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: animate-preloader 1.5s linear infinite;
+  50% {
+    transform: translateY(-40px);
   }
-  
-  @keyframes animate-preloader {
-    0% {
-      transform: rotate(0deg);
+}
+
+@keyframes anim2 {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+.dark-background #loader{
+  background-color: var(--custom-dark-mode);
+}
+
+.dark-background #loader div{
+  background: rgb(228, 228, 228);
+}
+
+.dark-background #loader::before{
+  border: 1px solid rgba(255, 255, 255, 0.274);
+}
+
+
+@media (max-width: 992px) {
+
+  #loader::before {
+    width: 56px;
+    height: 18px;
+  }
+
+  #loader div {
+    width: 8px;
+    height: 8px;
+    margin: 2px;
+    animation: anim3 2s infinite linear;
+    animation-delay: calc(-0.3s * var(--i));
+  }
+
+  @keyframes anim3 {
+    0%, 100% {
+      transform: translateY(3px);
     }
-  
-    100% {
-      transform: rotate(360deg);
+    50% {
+      transform: translateY(-20px);
     }
   }
-  
+
+}

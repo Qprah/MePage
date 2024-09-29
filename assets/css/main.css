@@ -13,6 +13,7 @@
   --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --custom-dark-mode: #212431;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -444,6 +445,7 @@ h6 {
 .toggle-container.active {
   visibility: visible;
   opacity: 1;
+  scale: 1.5;
   bottom: 50%;
   transform: translateX(-30%);
 }
@@ -577,6 +579,11 @@ section,
 .img-fluid {
   border-radius: 5%;
   filter: drop-shadow(0rem 0rem 0.75rem rgb(0, 0, 0));
+}
+
+.dark-background .img-fluid {
+  border-radius: 5%;
+  filter: none;
 }
 
 /*--------------------------------------------------------------
@@ -1564,4 +1571,18 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
+}
+
+#footer {
+  background-image: url('/assets/img/lines.svg');
+  background-size: cover; /* This makes sure the SVG covers the entire section */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 10px 0; /* Adjust padding as needed */
+}
+
+.dark-background #footer{
+  background-image: url('/assets/img/linesd.svg');
+  background-size: cover; /* This makes sure the SVG covers the entire section */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 10px 0; /* Adjust padding as needed */
 }
