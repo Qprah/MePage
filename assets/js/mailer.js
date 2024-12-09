@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        //btn.disabled = !isValid; // Enable/disable button based on validity
+        btn.disabled = !isValid; // Enable/disable button based on validity
     }
 
     // Attach input event to enable/disable button based on form validation
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             // Send email using emailJS or similar service
-            emailjs.send("service_bk0j879", "template_gdsfkhu", params)
+            emailjs.send("service_kwyuksl", "template_727ytn1", params)
                 .then(() => {
                     btn.value = 'Send Email';
                     loadingMessage.style.display = 'none'; // Hide loading message
