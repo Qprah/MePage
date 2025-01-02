@@ -388,6 +388,7 @@ h6 {
   cursor: default;   
 }
 
+
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
@@ -576,12 +577,25 @@ section,
   margin-bottom: 0;
 }
 
+.col-lg-7 {
+  padding-left: 3rem;
+}
+.col-lg-5 {
+  margin-right: 4rem;
+}
+
 .img-fluid {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center 20%;
   border-radius: 5%;
-  filter: drop-shadow(0rem 0rem 0.75rem rgb(0, 0, 0));
+  filter: drop-shadow(0rem 0rem 0.2rem rgb(0, 0, 0));
 }
 
 .dark-background .img-fluid {
+  aspect-ratio: 1/1;
+  object-fit: cover;
   border-radius: 5%;
   filter: none;
 }
@@ -830,9 +844,16 @@ section,
 
 .resume .resume-item h5 {
   font-size: 16px;
-  padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item p{
+  font-size: 12px;
+  display: inline-block;
+  text-align: right;
+  font-weight: 200;
   margin-bottom: 10px;
 }
 
@@ -842,8 +863,9 @@ section,
 
 .resume .resume-item ul li {
   font-family: var(--heading-font);
-  font-weight: 600;
-  padding-bottom: 10px;
+  font-weight: 400;
+  padding-bottom: 5px;
+  text-align: justify;
 }
 
 .resume .resume-item:last-child {
@@ -1585,9 +1607,7 @@ section,
 }
 
 @media (max-width: 932px) {
-
   #footer{
     background-size: 250%;
-
   }
 }
